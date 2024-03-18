@@ -1,9 +1,13 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "npm",
+    "analytics": "017c73d4-551a-49bf-97c8-eda2f05b20a9"
+  },
   "newProjectRoot": "projects",
   "projects": {
-    "bases": {
+    "gifs": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bases",
+            "outputPath": "dist/gifs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "bases:build:production"
+              "browserTarget": "gifs:build:production"
             },
             "development": {
-              "browserTarget": "bases:build:development"
+              "browserTarget": "gifs:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bases:build"
+            "browserTarget": "gifs:build"
           }
         },
         "test": {
@@ -94,8 +98,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "d317a8b5-ea34-4c1a-8bdd-53bdf9678b65"
   }
 }
